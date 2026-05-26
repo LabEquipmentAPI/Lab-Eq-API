@@ -16,3 +16,4 @@ A lightweight Ruby on Rails API designed to track department lab equipment, mana
 | **7** | Edge case testing and curl documentation| *[Teammate Name]* | `Task-7-Edge-case-testing` | ⚪ Not Started |
 
 ## Setup and Installation
+
