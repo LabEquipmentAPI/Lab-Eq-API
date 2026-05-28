@@ -9,7 +9,7 @@ A lightweight Ruby on Rails API designed to track department lab equipment, mana
 | :---: | :--- | :--- | :--- | :--- |
 | **1** | Data model and migrations | **Yishak Medhin** | `Task-1-Data-Model` | 🟢 Done |
 | **2** | Seed data | **Yishak Medhin** | `Task-2-Seed-data` | 🟢 Done |
-| **3** | Category CRUD with delete protection | *[Teammate Name]* | `Task-3-Category-CRUD` | ⚪ Not Started |
+| **3** | Category CRUD with delete protection | *Soleyana Yonas* | `Task-3-Category-CRUD` | 🟢 Done|
 | **4** | Equipment CRUD with filtering | *[Teammate Name]* | `Task-4-Equipment-CRUD` | ⚪ Not Started |
 | **5** | Maintenance Record CRUD with filtering | *[Teammate Name]* | `Task-5-MaintenanceRecord-CRUD` | ⚪ Not Started |
 | **6** | Business rules (4 custom validations) | *[Teammate Name]* | `Task-6-Business-rules` | ⚪ Not Started |
