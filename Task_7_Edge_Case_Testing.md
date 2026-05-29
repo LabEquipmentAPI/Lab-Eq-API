@@ -13,9 +13,7 @@ bin/rails server
 **Rule:** Category name must be at least 3 characters.
 
 ```bash
-curl -X POST http://localhost:3000/categories \
-  -H "Content-Type: application/json" \
-  -d '{"category": {"name": "AB"}}'
+curl -X POST http://localhost:3000/categories -H "Content-Type: application/json" -d '{"category": {"name": "AB"}}'
 ```
 
 **Expected Response (422 Unprocessable Entity):**

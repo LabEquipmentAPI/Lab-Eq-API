@@ -17,7 +17,7 @@ class Equipment < ApplicationRecord
 
   def name_must_be_real
     if name.present? && (name.length < 3 || !name.match?(/[a-zA-Z]/))
-      errors.add(:name, "must be at least 3 characters and must contain at least one letter") # [cite: 127, 161]
+      errors.add(:name, "must be at least 3 characters and must contain at least one letter")
     end
   end
 end
