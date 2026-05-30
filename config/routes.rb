@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :categories
-
+  resources :equipment
 end
