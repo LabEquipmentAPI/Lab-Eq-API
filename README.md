@@ -13,7 +13,7 @@ A lightweight Ruby on Rails API designed to track department lab equipment, mana
 | **4** | Equipment CRUD with filtering | Yabtsega Demis | `Task-4-Equipment-CRUD` | 🟢 Done |
 | **5** | Maintenance Record CRUD with filtering | Nahot Haile | `Task-5-MaintenanceRecord-CRUD` | 🟢 Done |
 | **6** | Business rules (4 custom validations) | Yohannes Mesfin | `Task-6-Business-rules` | 🟢 Done |
-| **7** | Edge case testing and curl documentation| *[Teammate Name]* | `Task-7-Edge-case-testing` | ⚪ Not Started |
+| **7** | Edge case testing and curl documentation| Nebiyu Samuel | `Task-7-Edge-case-testing` | 🟢 Done |
 
 ## Setup and Installation
 

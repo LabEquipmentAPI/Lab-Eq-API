@@ -3,13 +3,15 @@ class MaintenanceRecord < ApplicationRecord
 
   validates :description, presence: true
   validates :performed_at, presence: true
+  validates :equipment_id, presence: true
 
-  validates :date_cannot_be_in_the_future
+  validate :performed_at_cannot_be_in_the_future
 
   private
-  def date_cannot_be_in_the_future
+
+  def performed_at_cannot_be_in_the_future
     if performed_at.present? && performed_at > Time.current
-      errors.add(:performed_at, "can't be in the future")
+      errors.add(:performed_at, "cannot be in the future")
     end
   end
 end

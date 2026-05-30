@@ -1,13 +1,13 @@
 class EquipmentController < ApplicationController
-  before_action :set_equipment, only: [:show, :update, :destroy][cite: 6]
+  before_action :set_equipment, only: [:show, :update, :destroy]
 
   # GET /equipment - List all with category name, ordered by name, with optional filtering
   def index
 
-    @equipment = Equipment.includes(:category).order(:name)[cite: 6]
+    @equipment = Equipment.includes(:category).order(:name)
     
     if params[:status].present?
-      @equipment = @equipment.where(status: params[:status])[cite: 6]
+      @equipment = @equipment.where(status: params[:status])
     end
 
     
@@ -22,7 +22,7 @@ class EquipmentController < ApplicationController
         created_at: item.created_at,
         updated_at: item.updated_at
       }
-    }, status: :ok[cite: 6]
+    }, status: :ok
   end
 
   # GET /equipment/:id
@@ -37,45 +37,45 @@ class EquipmentController < ApplicationController
         name: @equipment.category.name
       },
       # Ordered by performed_at descending
-      maintenance_records: @equipment.maintenance_records.order(performed_at: :desc),[cite: 6]
+      maintenance_records: @equipment.maintenance_records.order(performed_at: :desc),
       created_at: @equipment.created_at,
       updated_at: @equipment.updated_at
-    }, status: :ok[cite: 6]
+    }, status: :ok
   end
 
   # POST /equipment - Create equipment
   def create
-    @equipment = Equipment.new(equipment_params)[cite: 6]
+    @equipment = Equipment.new(equipment_params)
 
-    if @equipment.save[cite: 6]
-      render json: @equipment, status: :created[cite: 6]
+    if @equipment.save
+      render json: @equipment, status: :created
     else
-      render json: { errors: @equipment.errors.full_messages }, status: :unprocessable_entity[cite: 6]
+      render json: { errors: @equipment.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /equipment/:id - Update equipment
   def update
-    if @equipment.update(equipment_params)[cite: 6]
-      render json: @equipment, status: :ok[cite: 6]
+    if @equipment.update(equipment_params)
+      render json: @equipment, status: :ok
     else
-      render json: { errors: @equipment.errors.full_messages }, status: :unprocessable_entity[cite: 6]
+      render json: { errors: @equipment.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
   # DELETE /equipment/:id 
   def destroy
-    @equipment.destroy[cite: 6]
+    @equipment.destroy
     head :no_content 
   end
 
   private
 
   def set_equipment
-    @equipment = Equipment.find(params[:id])[cite: 6]
+    @equipment = Equipment.find(params[:id])
   end
 
   def equipment_params
-    params.require(:equipment).permit(:name, :serial_number, :status, :category_id)[cite: 6]
+    params.require(:equipment).permit(:name, :serial_number, :status, :category_id)
   end
 end
